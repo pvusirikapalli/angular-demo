@@ -1,7 +1,8 @@
 pipeline {
-    agent {
-        docker { image 'node:12.2.0' }
-    }
+    agent {docker { image 'node:12.2.0' }}
+  environment {
+    HOME = '.'
+  }
     stages {
         stage('Test Version') {
             steps {
