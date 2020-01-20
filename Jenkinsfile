@@ -4,13 +4,15 @@ pipeline {
     HOME = '.'
   }
     stages {
-       stage('Test Version') {
-         agent {docker { image 'node:12.2.0' }}
+        stage('Build') {
+           agent {docker { image 'node:12.2.0' }}
             steps {
-                sh 'node --version'
+                sh 'npm install'
+                sh 'npm run build'
             }
         }
         stage('Dockerise') {
+           agent any
             steps {
                 sh 'docker version'
             }
