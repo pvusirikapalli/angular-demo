@@ -18,7 +18,7 @@ pipeline {
         stage('Dockerise') {
           
             steps {
-                sh 'docker version'
+                sh 'pwd'
             }
         }
     }
