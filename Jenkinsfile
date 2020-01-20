@@ -14,7 +14,7 @@ pipeline {
         stage('Dockerise') {
            agent any
             steps {
-                sh 'docker version'
+                sh 'docker build dist/angular-demo -t test-image'
             }
         }
     }
