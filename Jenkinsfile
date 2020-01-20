@@ -19,7 +19,7 @@ pipeline {
            agent any
             steps {
                 sh """
-                    docker version
+                    ./docker version
                    """
             }
         }
