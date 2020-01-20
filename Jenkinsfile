@@ -16,11 +16,8 @@ pipeline {
             }
         }
         stage('Dockerise') {
-           agent any
             steps {
-                sh """
-                    ./docker version
-                   """
+                sh 'docker version'
             }
         }
     }
