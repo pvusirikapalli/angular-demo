@@ -18,7 +18,7 @@ pipeline {
         stage('Dockerise') {
           
             steps {
-                sh 'pwd'
+                sh 'sudo docker version'
             }
         }
     }
