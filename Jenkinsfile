@@ -9,10 +9,15 @@ pipeline {
                 sh 'node --version'
             }
         }
-      stage('Build') {
+        stage('Build') {
             steps {
                 sh 'npm install'
                 sh 'npm run build'
+            }
+        }
+        stage('Dockerise') {
+            steps {
+                sh 'docker version'
             }
         }
     }
