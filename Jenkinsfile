@@ -16,7 +16,10 @@ pipeline {
             }
         }
         stage('Dockerise') {
-          
+           agent {docker { image 'node:12.2.0' }}
+          environment {
+              HOME = '.'
+          }
             steps {
                 sh 'sudo docker version'
             }
